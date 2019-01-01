@@ -1,0 +1,968 @@
+$comment
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+$end
+
+$date 
+  12/13/2012 12:12:00 
+$end
+$version 
+ QUARTUS_VCD_EXPORT 1.0 
+$end
+$timescale
+  1 ps
+$end
+$scope module Entire $end
+$var reg 1 ! ClockSig $end
+$var reg 16 " Ins_IF[15:0] $end
+$var reg 16 # Ins_ID[15:0] $end
+$var reg 16 $ Ins_EX[15:0] $end
+$var reg 16 % Ins_MEM[15:0] $end
+$var reg 16 & Ins_WB[15:0] $end
+$var reg 16 ' DOUT[15:0] $end
+$var reg 3 ( FLAGS[2:0] $end
+$var reg 3 ) FLAGS_FF[2:0] $end
+$var reg 4 * ALU_RS[3:0] $end
+$var reg 4 + ALU_RT[3:0] $end
+$var reg 4 , ALU_RD[3:0] $end
+$var reg 16 - ALU_A[15:0] $end
+$var reg 16 . ALU_B[15:0] $end
+$var reg 16 / BRANCH_ADDR[15:0] $end
+$var reg 1 0 BRANCH_YES $end
+$var reg 1 1 CARRYOUT $end
+$var reg 8 2 CONTROL_ID[7:0] $end
+$var reg 8 3 \CONTROL_ID/EX [7:0] $end
+$var reg 16 4 DATAWRITEBACK_RF[15:0] $end
+$var reg 4 5 RD_FINAL[3:0] $end
+$var reg 16 6 DM_DATAIN[15:0] $end
+$var reg 16 7 DM_DATAOUT[15:0] $end
+$var reg 4 8 DM_MEMADDR[3:0] $end
+$var reg 16 9 Inst_CHECK[15:0] $end
+$var reg 1 : LoadPC $end
+$var reg 16 ; PC_out[15:0] $end
+$var reg 16 < PC_out1[15:0] $end
+$var reg 1 = PCld $end
+$var reg 16 > RF0[15:0] $end
+$var reg 16 ? RF1[15:0] $end
+$var reg 16 @ RF2[15:0] $end
+$var reg 16 A RF3[15:0] $end
+$var reg 16 B RF4[15:0] $end
+$var reg 16 C RF5[15:0] $end
+$var reg 16 D RF6[15:0] $end
+$var reg 16 E RF7[15:0] $end
+$var reg 16 F RF8[15:0] $end
+$var reg 16 G RF9[15:0] $end
+$var reg 16 H RF10[15:0] $end
+$var reg 16 I RF11[15:0] $end
+$var reg 16 J RF12[15:0] $end
+$var reg 16 K RF13[15:0] $end
+$var reg 16 L RF14[15:0] $end
+$var reg 16 M RF15[15:0] $end
+$var reg 1 N ENWR_REGFILE $end
+$var reg 1 O INCDECSP $end
+$var reg 1 P SPSELECT $end
+$var reg 4 Q NEWADDRFORSP[3:0] $end
+$var reg 1 R SPSELECT2 $end
+$var reg 1 S FlagSet $end
+$var reg 1 T Flush $end
+$var reg 1 U REGWR_CTRL $end
+$var reg 1 V REGWR_IP_PIPE $end
+$var reg 1 W REGWR_OP_PIPE $end
+$var reg 1 X ForwardEX_A_TEST $end
+$var reg 1 Y ForwardEX_B_TEST $end
+$var reg 1 Z ForwardMEM_A_TEST $end
+$var reg 1 [ ForwardMEM_B_TEST $end
+$var reg 16 \ DATAIN_REGF_TEST[15:0] $end
+$var reg 16 ] A_RF[15:0] $end
+$var reg 16 ^ B_RF[15:0] $end
+$var reg 1 _ BRNCH_INPUT $end
+$var reg 1 ` BRStall $end
+$var reg 4 a DM_Addr[3:0] $end
+$var reg 16 b DM_Load[15:0] $end
+$var reg 16 c External_DataLoad_Reg[15:0] $end
+$var reg 4 d External_DestAddr[3:0] $end
+$var reg 1 e External_load $end
+$var reg 1 f ForwardID_A_TEST $end
+$var reg 1 g ForwardID_B_TEST $end
+$var reg 1 h HALT_TEST $end
+$var reg 1 i LWStall2 $end
+$var reg 4 j RD_READ[3:0] $end
+$var reg 1 k CALL_EX_TEST $end
+$var reg 1 l CALL_TEST $end
+$var reg 1 m RET_EX $end
+$var reg 1 n RET_ID $end
+$var reg 1 o RTORRD_TEST $end
+$var reg 1 p RET_MEM $end
+$var reg 2 q SelMUX[1:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+b0 #
+b0 $
+b0 %
+b0 &
+b0 '
+b0 (
+b0 )
+b0 *
+b0 +
+b0 ,
+b0 -
+b0 .
+b0 /
+00
+X1
+b1 2
+b0 3
+b0 4
+b0 5
+b0 6
+b0 7
+b0 8
+b0 9
+1:
+b0 ;
+b1 <
+1=
+b0 >
+b0 ?
+b0 @
+b0 A
+b0 B
+b0 C
+b0 D
+b0 E
+b0 F
+b0 G
+b0 H
+b0 I
+b0 J
+b0 K
+b0 L
+b0 M
+0N
+0O
+0P
+b0 Q
+0R
+1S
+0T
+1U
+0V
+0W
+0X
+0Y
+0Z
+0[
+b0 \
+b0 ]
+b0 ^
+0_
+0`
+b0 a
+b0 b
+b1 c
+b1 d
+1e
+0f
+0g
+0h
+0i
+b0 j
+0k
+0l
+0m
+0n
+0o
+0p
+b0 q
+$end
+#5000
+1!
+bX '
+b1 ,
+01
+b1 3
+b1 5
+b1 ;
+b10 <
+1N
+bX Q
+1V
+b1 \
+#10000
+0!
+b10 c
+b10 d
+#15000
+1!
+b0 '
+b10 ,
+b1 /
+bX 4
+b10 5
+b10 ;
+b11 <
+b1 ?
+b0 Q
+1W
+b10 \
+#20000
+0!
+b11 c
+b11 d
+#25000
+1!
+b11 ,
+b10 /
+b0 4
+b11 5
+b11 ;
+b100 <
+b10 @
+b11 \
+#30000
+0!
+b10 a
+b1011 b
+b0 c
+b0 d
+#35000
+1!
+b1000010000000010 "
+b0 ,
+b11 /
+b0 5
+b1011 6
+b10 8
+b1000010000000010 9
+b100 ;
+b101 <
+b11 A
+b0 \
+#40000
+0!
+b0 a
+b0 b
+0e
+#45000
+1!
+b1001100110010 "
+b1000010000000010 #
+b10 +
+b100 /
+b0 2
+b0 6
+b0 8
+b1001100110010 9
+b101 ;
+b110 <
+#50000
+0!
+#55000
+1!
+b1100001011111101 "
+b1001100110010 #
+b1000010000000010 $
+b11 *
+b10 .
+b111 /
+b10 2
+b0 3
+b1100001011111101 9
+b110 ;
+b111 <
+0S
+b11 ]
+b10 ^
+#60000
+0!
+#65000
+1!
+b1100001011111101 #
+b1001100110010 $
+b1000010000000010 %
+b10 '
+b1111 *
+b1101 +
+b11 -
+b111000 /
+11
+b0 2
+b10 3
+b1011 7
+b10 8
+b1101000000001001 9
+b111 ;
+b1000 <
+b10 Q
+1S
+0U
+b0 ]
+b0 ^
+1`
+#70000
+0!
+#75000
+1!
+b1101000000001001 "
+b0 $
+b1001100110010 %
+b1000010000000010 &
+b1 '
+b100 ,
+b0 -
+b0 .
+b0 /
+01
+b0 3
+b1011 4
+b100 5
+b10 6
+b0 7
+b1 8
+b1 Q
+0V
+b1011 \
+0`
+1i
+b100 j
+#80000
+0!
+#85000
+1!
+b0 "
+b1101000000001001 #
+b1100001011111101 $
+b0 %
+b1001100110010 &
+b0 '
+b0 *
+b1001 +
+b11 ,
+b1111111111111101 .
+b101 /
+10
+b1 4
+b11 5
+b0 6
+b0 8
+b1111000000000000 9
+b1000 ;
+b101 <
+b1011 B
+1O
+1P
+b0 Q
+0S
+1T
+1U
+0W
+b1 \
+1_
+0i
+b11 j
+1l
+b1 q
+#90000
+0!
+#95000
+1!
+b1001100110010 "
+b0 #
+b0 $
+b1100001011111101 %
+b0 &
+b1111111111111101 '
+b0 +
+b0 ,
+b0 .
+b0 /
+00
+X1
+b1 2
+b1111 5
+b1101 8
+b1001100110010 9
+b101 ;
+b110 <
+b1 A
+0N
+0O
+0P
+b1101 Q
+1R
+1S
+0T
+1V
+0_
+b0 j
+0l
+b0 q
+#100000
+0!
+#105000
+1!
+b1100001011111101 "
+b1001100110010 #
+b0 %
+b1100001011111101 &
+bX '
+b11 *
+b10 +
+b10 ,
+b1001 /
+01
+b10 2
+b1 3
+b1111111111111101 4
+b10 5
+b0 8
+b1100001011111101 9
+b110 ;
+b111 <
+b0 Q
+0R
+1W
+b1111111111111101 \
+b1 ]
+b10 ^
+b10 j
+#110000
+0!
+#115000
+1!
+b1100001011111101 #
+b1001100110010 $
+b0 &
+b0 '
+b1111 *
+b1101 +
+b0 ,
+b1 -
+b10 .
+b111000 /
+b0 2
+b10 3
+bX 4
+b0 5
+b1101000000001001 9
+b111 ;
+b1000 <
+1N
+0U
+bX \
+b0 ]
+b0 ^
+1`
+b0 j
+#120000
+0!
+#125000
+1!
+b1101000000001001 "
+b0 $
+b1001100110010 %
+b1111111111111111 '
+b1 (
+b0 -
+b0 .
+b0 /
+b0 3
+b0 4
+b10 6
+b1111 8
+bX >
+b1111 Q
+0V
+b0 \
+0`
+1i
+#130000
+0!
+#135000
+1!
+b1111000000000000 "
+b1101000000001001 #
+b1100001011111101 $
+b0 %
+b1001100110010 &
+b0 '
+b1 )
+b0 *
+b1001 +
+b11 ,
+b1111111111111101 .
+b101 /
+b1111111111111111 4
+b11 5
+b0 6
+b0 8
+b1111000000000000 9
+b1000 ;
+b1001 <
+b0 >
+1O
+1P
+b0 Q
+0S
+1U
+0W
+b1111111111111111 \
+0i
+b11 j
+1l
+#140000
+0!
+#145000
+1!
+b0 "
+b1111000000000000 #
+b1101000000001001 $
+b1100001011111101 %
+b0 &
+b1111111111111101 '
+b0 +
+b0 ,
+b0 .
+b10001 /
+X1
+b1 4
+b1111 5
+b1101 8
+b100111111111111 9
+b1001 ;
+b1111111111111111 A
+0O
+0P
+b1101 Q
+1R
+1T
+0U
+1V
+b1 \
+b0 j
+1k
+0l
+b10 q
+#150000
+0!
+#155000
+1!
+b100111111111111 "
+b0 #
+b0 $
+b1101000000001001 %
+b1100001011111101 &
+bX '
+bX (
+b10 ,
+b0 /
+b1 2
+b1111111111111101 4
+b10 5
+b1000 6
+b0 8
+b1010 <
+b1 M
+0N
+b0 Q
+0R
+1S
+0T
+1U
+0V
+1W
+b1111111111111101 \
+b10 j
+0k
+b0 q
+#160000
+0!
+#165000
+1!
+b1110000000000000 "
+b100111111111111 #
+b0 %
+b1101000000001001 &
+bX )
+b1111 *
+b1111 +
+b0 ,
+b1010 /
+01
+b10000 2
+b1 3
+bX 4
+b0 5
+b0 6
+b0X0XX 7
+bX 8
+b1110000000000000 9
+b1010 ;
+b1011 <
+1N
+bX Q
+1V
+0W
+bX \
+b1 ]
+b1111111111111111 ^
+b0 j
+#170000
+0!
+#175000
+1!
+b0 "
+b1110000000000000 #
+b100111111111111 $
+b0 &
+b0 '
+b0 *
+b0 +
+b1 -
+b1111111111111111 .
+b1001 /
+b0 2
+b10000 3
+b1000 7
+b0 8
+b0 9
+b1011 ;
+b1100 <
+bX >
+0N
+1P
+b0 Q
+0U
+1W
+bX ]
+bX ^
+1n
+#180000
+0!
+#185000
+1!
+b0 #
+b1110000000000000 $
+b100111111111111 %
+b100 (
+bX -
+bX .
+b1011 /
+X1
+b1 2
+b0 3
+b1111111111111111 4
+b1111 5
+b1111111111111111 6
+b1100 ;
+b1000 <
+1N
+0P
+1R
+0S
+1T
+1U
+0V
+b1111111111111111 \
+b1111111111111111 ]
+b1111111111111111 ^
+1m
+0n
+b11 q
+#190000
+0!
+#195000
+1!
+b1111000000000000 "
+b0 $
+b1110000000000000 %
+b100111111111111 &
+bX '
+bX (
+b100 )
+b1111 ,
+b0 -
+b0 .
+b0 /
+b0 4
+b1011 6
+b0X0XX 7
+bX 8
+b1111000000000000 9
+b1000 ;
+b1001 <
+b1111111111111111 M
+bX Q
+0R
+1S
+0T
+1V
+0W
+b0 \
+bX ]
+bX ^
+b1111 j
+0m
+1p
+b0 q
+#200000
+0!
+#205000
+1!
+b1111000000000000 #
+b0 %
+b1110000000000000 &
+bX )
+b0 ,
+bX -
+bX .
+b1101 /
+b0 2
+b1 3
+b0X0XX 4
+b0 5
+b0 6
+b100111111111111 9
+b1001 ;
+b1010 <
+b0 M
+0N
+0U
+1W
+b0X0XX \
+b0 j
+0p
+#210000
+0!
+#215000
+1!
+b1111000000000000 $
+b0 &
+b1001 /
+b0 3
+bX 4
+bX 6
+b1110000000000000 9
+b1010 ;
+b1011 <
+0=
+1N
+0S
+0V
+bX \
+1h
+#220000
+0!
+#225000
+1!
+b1111000000000000 %
+b1010 /
+0W
+#230000
+0!
+#235000
+1!
+b1111000000000000 &
+b1011 /
+0N
+#240000
+0!
+#245000
+1!
+#250000
+0!
+#255000
+1!
+#260000
+0!
+#265000
+1!
+#270000
+0!
+#275000
+1!
+#280000
+0!
+#285000
+1!
+#290000
+0!
+#295000
+1!
+#300000
+0!
+#305000
+1!
+#310000
+0!
+#315000
+1!
+#320000
+0!
+#325000
+1!
+#330000
+0!
+#335000
+1!
+#340000
+0!
+#345000
+1!
+#350000
+0!
+#355000
+1!
+#360000
+0!
+#365000
+1!
+#370000
+0!
+#375000
+1!
+#380000
+0!
+#385000
+1!
+#390000
+0!
+#395000
+1!
+#400000
+0!
+#405000
+1!
+#410000
+0!
+#415000
+1!
+#420000
+0!
+#425000
+1!
+#430000
+0!
+#435000
+1!
+#440000
+0!
+#445000
+1!
+#450000
+0!
+#455000
+1!
+#460000
+0!
+#465000
+1!
+#470000
+0!
+#475000
+1!
+#480000
+0!
+#485000
+1!
+#490000
+0!
+#495000
+1!
+#500000
+0!
+#505000
+1!
+#510000
+0!
+#515000
+1!
+#520000
+0!
+#525000
+1!
+#530000
+0!
+#535000
+1!
+#540000
+0!
+#545000
+1!
+#550000
+0!
+#555000
+1!
+#560000
+0!
+#565000
+1!
+#570000
+0!
+#575000
+1!
+#580000
+0!
+#585000
+1!
+#590000
+0!
+#595000
+1!
+#600000
+0!
+#605000
+1!
+#610000
+0!
+#615000
+1!
+#620000
+0!
+#625000
+1!
+#630000
+0!
+#635000
+1!
+#640000
+0!
+#645000
+1!
+#650000
+0!
+#655000
+1!
+#660000
+0!
+#665000
+1!
+#670000
+0!
+#675000
+1!
+#680000
+0!
+#685000
+1!
+#690000
+0!
+#695000
+1!
+#700000
